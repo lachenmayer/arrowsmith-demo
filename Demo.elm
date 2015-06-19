@@ -3,8 +3,7 @@ module Demo where
 import Color exposing (..)
 import Graphics.Collage exposing (..)
 import Graphics.Element exposing (..)
-import Signal
-import Time
+import Time exposing (..)
 
 answer = 42
 
@@ -16,5 +15,9 @@ betterAnswer =
 bigger first second =
   if first > second then first else second
 
-someCircle =
-  filled red (circle 50)
+redCircle =
+  filled red (circle 150)
+
+line color length angle =
+  segment (0,0) (fromPolar (length, degrees angle))
+    |> traced (solid color)
