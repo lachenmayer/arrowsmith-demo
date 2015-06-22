@@ -26,7 +26,7 @@ view (mouseX, mouseY) =
     else
       refractedRay incidentAngle
   in
-    collage height width <|
+    collage width height <|
       [ normal
       , plane
       , incidentRay (collageX, collageY)
@@ -37,7 +37,7 @@ inFirstMedium (x, y) =
   (toFloat y) < height / 2
 
 height = 500
-width = 500
+width = 800
 
 normal : Form
 normal =
@@ -70,14 +70,15 @@ reflectedRay incidentAngle =
   in
     traced (dashed Color.red) (segment (0, 0) (xR, yR))
 
-
 criticalAngle : Float
 criticalAngle =
   asin (nRefractive / nIncident)
 
 willReflect : Float -> Bool
 willReflect incidentAngle =
-  abs incidentAngle > criticalAngle
+  if nRefractive < nIncident
+    then abs incidentAngle > criticalAngle
+    else False
 
 angleWithNormal : (Float, Float) -> Float
 angleWithNormal (x, y) =
