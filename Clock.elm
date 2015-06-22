@@ -5,8 +5,11 @@ import Graphics.Collage exposing (..)
 import Graphics.Element exposing (..)
 import Time exposing (..)
 
-redCircle =
-  filled red (circle 150)
+someColor =
+  rgb 200 12 34
+
+face =
+  filled someColor (circle 150)
 
 line color length angle =
   segment (0,0) (fromPolar (length, degrees angle))
