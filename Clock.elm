@@ -6,7 +6,7 @@ import Graphics.Element exposing (..)
 import Time exposing (..)
 
 someNumber =
-  max 42 1337
+  36099 / 27
 
 someColor =
   rgb 200 12 34
