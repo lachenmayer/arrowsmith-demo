@@ -1,4 +1,4 @@
-module ModuleName where
+module Snell where
 
 import Debug
 
