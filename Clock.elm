@@ -29,6 +29,3 @@ clock t =
 
 now =
   every (second / 60)
-
-nowClock =
-  Signal.map clock now
