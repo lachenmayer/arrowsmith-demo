@@ -132,7 +132,7 @@ view : Address Action -> Model -> Html
 view address model =
     div
       [ class "todomvc-wrapper"
-      , style [ ("visibility", "hidden") ]
+      , style [ ]
       ]
       [ section
           [ id "todoapp" ]
