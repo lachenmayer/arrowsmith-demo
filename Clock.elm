@@ -25,8 +25,8 @@ hand length t =
 timeToAngle t =
   90 - 6 * t / 1000
 
-clock =
-  collage 400 400 [face]
+clock t =
+  collage 400 400 [face, hand 120 t]
 
 now =
   every (second / 60)
